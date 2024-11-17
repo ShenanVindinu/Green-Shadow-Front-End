@@ -2,7 +2,7 @@
   "name": "green-shadow",
   "version": "1.0.0",
   "description": "green Shadow Spring boot project front-end",
-  "main": "index.html",
+  "main": "src/index.html",
   "scripts": {
     "test": "test"
   },
