@@ -1,0 +1,26 @@
+{
+  "name": "green-shadow",
+  "version": "1.0.0",
+  "description": "green Shadow Spring boot project front-end",
+  "main": "index.html",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShenanVindinu/Green-Shadow-Front-End.git"
+  },
+  "keywords": [
+    "green",
+    "shadow"
+  ],
+  "author": "Shenan Vindinu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ShenanVindinu/Green-Shadow-Front-End/issues"
+  },
+  "homepage": "https://github.com/ShenanVindinu/Green-Shadow-Front-End#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}
