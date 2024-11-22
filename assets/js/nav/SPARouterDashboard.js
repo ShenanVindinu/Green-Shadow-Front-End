@@ -1,3 +1,5 @@
+$("#staff-section").css({display: 'none'});
+
 $("#staffBtn").eq(0).on('click', () => {
     $("#dashboard-section").css({display: 'none'});
     $("#staff-section").css({display: 'block'});
