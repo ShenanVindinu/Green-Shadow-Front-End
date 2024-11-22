@@ -7,5 +7,8 @@
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="boxicons" level="application" />
+    <orderEntry type="library" name="twitter-bootstrap" level="application" />
+    <orderEntry type="library" name="dataTables.bootstrap5" level="application" />
+    <orderEntry type="library" name="dataTables" level="application" />
   </component>
 </module>
