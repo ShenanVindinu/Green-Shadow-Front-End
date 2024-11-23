@@ -1171,7 +1171,79 @@
 </section>
 <section id="monitoringLogSection">
 
+    <div class="mb-3">
+        <label for="MonitoringLogDateField" class="form-label">MonitoringLog Date</label>
+        <input type="date" class="form-control" id="MonitoringLogDateField">
+    </div>
 
+    <div class="mb-3">
+        <label for="MonitoringLogDetailsField" class="form-label">Monitoring Log Details</label>
+        <textarea class="form-control" id="MonitoringLogDetailsField" rows="3"></textarea>
+    </div>
+
+    <div class="mb-3">
+        <label for="MonitoringLogFieldIdField" class="form-label">Monitoring Log Field Id</label>
+        <input type="text" class="form-control" id="MonitoringLogFieldIdField" placeholder="Optional">
+    </div>
+
+    <div class="mb-3">
+        <label for="MonitoringLogStaffId" class="form-label">Monitoring Log Staff Id</label>
+        <input type="text" class="form-control" id="MonitoringLogStaffId" placeholder="Optional">
+    </div>
+
+    <div class="btn-group mb-5 mt-4" role="group" aria-label="Basic mixed styles example">
+        <button id="saveMonitoringLogBtn" type="button" class="btn btn-warning">Save</button>
+        <button id="updateMonitoringLogBtn" type="button" class="btn btn-success">Update</button>
+        <button id="deleteMonitoringLogBtn" type="button" class="btn btn-danger">Delete</button>
+        <button id="clearMonitoringLogBtn" type="button" class="btn btn-primary">clear</button>
+    </div>
+
+    <table id="MonitoringLogTable" class="table table-striped" style="width:100%">
+        <thead>
+        <tr>
+            <th>MonitoringLog Date</th>
+            <th>Monitoring Log Details</th>
+            <th>Monitoring Log Field Id</th>
+            <th>Monitoring Log Staff Id</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+        <tr>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+        <tr>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+        <tr>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+
+        </tbody>
+        <tfoot>
+        <tr>
+            <th>MonitoringLog Date</th>
+            <th>Monitoring Log Details</th>
+            <th>Monitoring Log Field Id</th>
+            <th>Monitoring Log Staff Id</th>
+        </tr>
+        </tfoot>
+    </table>
 
 </section>
 
@@ -1193,6 +1265,7 @@
     new DataTable('#EquipmentTable');
     new DataTable('#FieldTable');
     new DataTable('#CropTable');
+    new DataTable('#MonitoringLogTable');
 </script>
 <script src="../assets/js/nav/SPARouterDashboard.js"></script>
 <script src="../assets/js/nav/sidebar.js"></script>
