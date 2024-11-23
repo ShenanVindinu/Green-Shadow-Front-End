@@ -48,7 +48,7 @@
                     <span class="nav_name">Equipments</span>
                 </a>
 
-                <a href="#" class="nav_link">
+                <a id="fieldBtn" class="nav_link">
                     <i class='bx bx-square nav_icon'></i>
                     <span class="nav_name">Fields</span>
                 </a>
@@ -899,7 +899,175 @@
 </section>
 <section id="equipmentSection">
 
+    <div class="mb-3">
+        <label for="equipmentNameField" class="form-label">Equipment Name</label>
+        <input type="text" class="form-control" id="equipmentNameField">
+    </div>
 
+    <div class="mb-3">
+        <label for="equipmentTypeSelect" class="form-label">Equipment Type</label>
+        <select class="form-select" aria-label="equipmentTypeSelect" id="equipmentTypeSelect">
+            <option selected>Select</option>
+            <option value="1">ELECTRICAL</option>
+            <option value="2">MECHANICAL</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="equipmentStatusSelect" class="form-label">Equipment Status</label>
+        <select class="form-select" aria-label="equipmentStatusSelect" id="equipmentStatusSelect">
+            <option selected>Select</option>
+            <option value="1">AVAILABLE</option>
+            <option value="2">UNAVAILABLE</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="equipmentStaffIdField" class="form-label">Equipment Staff Id</label>
+        <input type="text" class="form-control" id="equipmentStaffIdField">
+    </div>
+
+    <div class="btn-group mb-5 mt-4" role="group" aria-label="Basic mixed styles example">
+        <button id="saveEquipmentBtn" type="button" class="btn btn-warning">Save</button>
+        <button id="updateEquipmentBtn" type="button" class="btn btn-success">Update</button>
+        <button id="deleteEquipmentBtn" type="button" class="btn btn-danger">Delete</button>
+        <button id="clearEquipmentBtn" type="button" class="btn btn-primary">clear</button>
+    </div>
+
+    <table id="EquipmentTable" class="table table-striped" style="width:100%">
+        <thead>
+        <tr>
+            <th>Equipment Name</th>
+            <th>Equipment Type</th>
+            <th>Equipment Status</th>
+            <th>Equipment Staff Id</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+        <tr>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+        <tr>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+        <tr>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+
+        </tbody>
+        <tfoot>
+        <tr>
+            <th>Equipment Name</th>
+            <th>Equipment Type</th>
+            <th>Equipment Status</th>
+            <th>Equipment Staff Id</th>
+        </tr>
+        </tfoot>
+    </table>
+
+</section>
+<section id="FieldSection">
+
+    <div class="mb-3">
+        <label for="FieldNameField" class="form-label">Field Name</label>
+        <input type="text" class="form-control" id="FieldNameField">
+    </div>
+
+    <div class="mb-3">
+        <label for="FieldLocationField" class="form-label">Field Location</label>
+        <input type="text" class="form-control" id="FieldLocationField">
+    </div>
+
+    <div class="mb-3">
+        <label for="extentSizeField" class="form-label">Extent Size Of The Field (  km<sup>2</sup> )</label>
+        <input type="number" class="form-control" id="extentSizeField">
+    </div>
+
+    <div class="mb-3">
+        <label for="fieldImage1" class="form-label">Add Field Image 1</label>
+        <input class="form-control" type="file" id="fieldImage1">
+    </div>
+
+    <div class="mb-3">
+        <label for="fieldImage2" class="form-label">Add Field Image 2</label>
+        <input class="form-control" type="file" id="fieldImage2">
+    </div>
+
+    <div class="btn-group mb-5 mt-4" role="group" aria-label="Basic mixed styles example">
+        <button id="saveFieldBtn" type="button" class="btn btn-warning">Save</button>
+        <button id="updateFieldBtn" type="button" class="btn btn-success">Update</button>
+        <button id="deleteFieldBtn" type="button" class="btn btn-danger">Delete</button>
+        <button id="clearFieldBtn" type="button" class="btn btn-primary">clear</button>
+    </div>
+
+    <table id="FieldTable" class="table table-striped" style="width:100%">
+        <thead>
+        <tr>
+            <th>Field Name</th>
+            <th>Field Location</th>
+            <th>Extent Size Of The Field (  km<sup>2</sup> )</th>
+            <th>Add Field Image 1</th>
+            <th>Add Field Image 2</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+        <tr>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+        <tr>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+        <tr>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+
+        </tbody>
+        <tfoot>
+        <tr>
+            <th>Field Name</th>
+            <th>Field Location</th>
+            <th>Extent Size Of The Field (  km<sup>2</sup> )</th>
+            <th>Add Field Image 1</th>
+            <th>Add Field Image 2</th>
+        </tr>
+        </tfoot>
+    </table>
 
 </section>
 
@@ -918,6 +1086,8 @@
     new DataTable('#dashboardTable');
     new DataTable('#staffTable');
     new DataTable('#vehicleTable');
+    new DataTable('#EquipmentTable');
+    new DataTable('#FieldTable');
 </script>
 <script src="../assets/js/nav/SPARouterDashboard.js"></script>
 <script src="../assets/js/nav/sidebar.js"></script>
