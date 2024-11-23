@@ -1,13 +1,13 @@
-$("#staff-section").css({display: 'none'});
+$("#staffSection").css({display: 'none'});
 
 $("#staffBtn").eq(0).on('click', () => {
-    $("#dashboard-section").css({display: 'none'});
-    $("#staff-section").css({display: 'block'});
+    $("#dashboardSection").css({display: 'none'});
+    $("#staffSection").css({display: 'block'});
 });
 
 $("#dashboardBtn").eq(0).on('click', () => {
-    $("#dashboard-section").css({display: 'block'});
-    $("#staff-section").css({display: 'none'});
+    $("#dashboardSection").css({display: 'block'});
+    $("#staffSection").css({display: 'none'});
 });
 
 
