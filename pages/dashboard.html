@@ -53,7 +53,7 @@
                     <span class="nav_name">Fields</span>
                 </a>
 
-                <a href="#" class="nav_link">
+                <a id="cropBtn" class="nav_link">
                     <i class='bx bxs-florist nav_icon'></i>
                     <span class="nav_name">Crops</span>
                 </a>
@@ -1070,6 +1070,105 @@
     </table>
 
 </section>
+<section id="cropSection">
+
+    <div class="mb-3">
+        <label for="CropCommonNameField" class="form-label">Crop Common Name</label>
+        <input type="text" class="form-control" id="CropCommonNameField">
+    </div>
+
+    <div class="mb-3">
+        <label for="CropCommonScientificNameField" class="form-label">Crop Common Scientific Name</label>
+        <input type="text" class="form-control" id="CropCommonScientificNameField">
+    </div>
+
+    <div class="mb-3">
+        <label for="CropCategoryField" class="form-label">Crop Category</label>
+        <input type="text" class="form-control" id="CropCategoryField">
+    </div>
+
+    <div class="mb-3">
+        <label for="CropImage" class="form-label">Crop Image</label>
+        <input class="form-control" type="file" id="CropImage">
+    </div>
+
+    <div class="mb-3">
+        <label for="CropSeasonField" class="form-label">Crop Season</label>
+        <input type="text" class="form-control" id="CropSeasonField">
+    </div>
+
+    <div class="mb-3">
+        <label for="CropFieldIdField" class="form-label">Assign Crop Field Id</label>
+        <input type="text" class="form-control" id="CropFieldIdField" placeholder="Optional">
+    </div>
+
+    <div class="btn-group mb-5 mt-4" role="group" aria-label="Basic mixed styles example">
+        <button id="saveCropBtn" type="button" class="btn btn-warning">Save</button>
+        <button id="updateCropBtn" type="button" class="btn btn-success">Update</button>
+        <button id="deleteCropBtn" type="button" class="btn btn-danger">Delete</button>
+        <button id="clearCropBtn" type="button" class="btn btn-primary">clear</button>
+    </div>
+
+    <table id="CropTable" class="table table-striped" style="width:100%">
+        <thead>
+        <tr>
+            <th>Crop Common Name</th>
+            <th>Crop Scientific Name</th>
+            <th>Crop  Category</th>
+            <th>Crop Image</th>
+            <th>Crop Season</th>
+            <th>Assigned Crop Field Id</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+        <tr>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+        <tr>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+        <tr>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+
+        </tbody>
+        <tfoot>
+        <tr>
+            <th>Crop Common Name</th>
+            <th>Crop Scientific Name</th>
+            <th>Crop  Category</th>
+            <th>Crop Image</th>
+            <th>Crop Season</th>
+            <th>Assigned Crop Field Id</th>
+        </tr>
+        </tfoot>
+    </table>
+
+</section>
 
 
 <!--Container Main end-->
@@ -1088,6 +1187,7 @@
     new DataTable('#vehicleTable');
     new DataTable('#EquipmentTable');
     new DataTable('#FieldTable');
+    new DataTable('#CropTable');
 </script>
 <script src="../assets/js/nav/SPARouterDashboard.js"></script>
 <script src="../assets/js/nav/sidebar.js"></script>
