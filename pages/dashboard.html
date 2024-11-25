@@ -1249,6 +1249,11 @@
         <input type="text" class="form-control" id="MonitoringLogStaffId" placeholder="Optional">
     </div>
 
+    <div class="mb-3">
+        <label for="monitoringLogIdField" class="form-label">Log ID</label>
+        <input type="text" class="form-control" id="monitoringLogIdField" placeholder="Only add for delete and update">
+    </div>
+
     <div class="btn-group mb-5 mt-4" role="group" aria-label="Basic mixed styles example">
         <button id="saveMonitoringLogBtn" type="button" class="btn btn-warning">Save</button>
         <button id="updateMonitoringLogBtn" type="button" class="btn btn-success">Update</button>
@@ -1259,7 +1264,8 @@
     <table id="MonitoringLogTable" class="table table-striped" style="width:100%">
         <thead>
         <tr>
-            <th>MonitoringLog Date</th>
+            <th>Log ID</th>
+            <th>Monitoring Log Date</th>
             <th>Monitoring Log Details</th>
             <th>Monitoring Log Field Id</th>
             <th>Monitoring Log Staff Id</th>
@@ -1271,11 +1277,6 @@
             <td>N/A</td>
             <td>N/A</td>
             <td>N/A</td>
-        </tr>
-        <tr>
-            <td>N/A</td>
-            <td>N/A</td>
-            <td>N/A</td>
             <td>N/A</td>
         </tr>
         <tr>
@@ -1283,8 +1284,17 @@
             <td>N/A</td>
             <td>N/A</td>
             <td>N/A</td>
+            <td>N/A</td>
         </tr>
         <tr>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+        <tr>
+            <td>N/A</td>
             <td>N/A</td>
             <td>N/A</td>
             <td>N/A</td>
@@ -1295,6 +1305,7 @@
         </tbody>
         <tfoot>
         <tr>
+            <th>Log ID</th>
             <th>MonitoringLog Date</th>
             <th>Monitoring Log Details</th>
             <th>Monitoring Log Field Id</th>
