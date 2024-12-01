@@ -68,6 +68,11 @@
                     <span class="nav_name">Monitoring Log</span>
                 </a>
 
+                <a id="UserBtn" class="nav_link">
+                    <i class='bx bx-user-circle nav_icon'></i>
+                    <span class="nav_name">Users</span>
+                </a>
+
             </div>
         </div>
 
@@ -1310,6 +1315,73 @@
             <th>Monitoring Log Details</th>
             <th>Monitoring Log Field Id</th>
             <th>Monitoring Log Staff Id</th>
+        </tr>
+        </tfoot>
+    </table>
+
+</section>
+<section id="userSection">
+
+    <div class="mb-3">
+        <label for="UserEmailField2" class="form-label">Email</label>
+        <input type="text" class="form-control" id="UserEmailField2">
+    </div>
+
+    <div class="mb-3">
+        <label for="UserPasswordField2" class="form-label">Password</label>
+        <input type="password" class="form-control" id="UserPasswordField2">
+    </div>
+
+    <div class="col">
+        <label for="UserRoleSelect" class="form-label">Role</label>
+        <select class="form-select" aria-label="SetRole" id="UserRoleSelect">
+            <option selected>Choose Role</option>
+            <option value="1">ADMIN</option>
+            <option value="2">MANAGER</option>
+            <option value="3">SCIENTIST</option>
+            <option value="4">OTHER</option>
+        </select>
+    </div>
+
+    <div class="mb-5"></div>
+
+    <table id="UserTable" class="table table-striped" style="width:100%">
+        <thead>
+        <tr>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Role</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+        <tr>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+        <tr>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+        <tr>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+
+
+        </tbody>
+        <tfoot>
+        <tr>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Role</th>
         </tr>
         </tfoot>
     </table>
