@@ -66,7 +66,7 @@
             </div>
             <div style="height: 20px;"></div>
             <div class="d-grid gap-2">
-                <button type="submit" class="btn btn-primary">Signup</button>
+                <button id="submitSignupBtn" type="submit" class="btn btn-primary">Signup</button>
                 <a id="SignupBack" class="btn btn-secondary float-end" href="#">Back</a>
             </div>
         </form>
@@ -84,10 +84,6 @@
         crossorigin="anonymous"></script>
 <script src="assets/js/lib/jquery-3.7.1.min.js"></script>
 <script src="assets/js/nav/SPARouterLogging.js"></script>
-<script>
-    $("#loginBtn").on('click', () => {
-        window.location.href = "pages/dashboard.html";
-    });
-</script>
+<script src="assets/js/controller/AuthController.js"></script>
 </body>
 </html>
