@@ -29,3 +29,15 @@
     background-color: #31511E;
     border-color: #31511E;
 }
+
+.btn-secondary {
+    background-color: #859F3D;
+    border-color: #859F3D;
+    color: #ffffff
+}
+
+.btn-secondary:hover {
+    background-color: #8FD14F;
+    border-color: #8FD14F;
+    color: #ffffff;
+}
