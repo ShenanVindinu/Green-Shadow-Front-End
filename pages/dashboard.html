@@ -1336,20 +1336,23 @@
         <label for="UserRoleSelect" class="form-label">Role</label>
         <select class="form-select" aria-label="SetRole" id="UserRoleSelect">
             <option selected>Choose Role</option>
-            <option value="1">ADMIN</option>
-            <option value="2">MANAGER</option>
-            <option value="3">SCIENTIST</option>
-            <option value="4">OTHER</option>
+            <option value="ADMIN">ADMIN</option>
+            <option value="MANAGER">MANAGER</option>
+            <option value="SCIENTIST">SCIENTIST</option>
+            <option value="OTHER">OTHER</option>
         </select>
     </div>
 
-    <div class="mb-5"></div>
+    <br>
+
+    <div class="mb-3">
+        <button id="updateUserBtn" type="button" class="btn btn-secondary">Update User Details</button>
+    </div>
 
     <table id="UserTable" class="table table-striped" style="width:100%">
         <thead>
         <tr>
             <th>Email</th>
-            <th>Password</th>
             <th>Role</th>
         </tr>
         </thead>
@@ -1357,20 +1360,16 @@
         <tr>
             <td>N/A</td>
             <td>N/A</td>
+        </tr>
+        <tr>
+            <td>N/A</td>
             <td>N/A</td>
         </tr>
         <tr>
             <td>N/A</td>
             <td>N/A</td>
-            <td>N/A</td>
         </tr>
         <tr>
-            <td>N/A</td>
-            <td>N/A</td>
-            <td>N/A</td>
-        </tr>
-        <tr>
-            <td>N/A</td>
             <td>N/A</td>
             <td>N/A</td>
         </tr>
@@ -1380,7 +1379,6 @@
         <tfoot>
         <tr>
             <th>Email</th>
-            <th>Password</th>
             <th>Role</th>
         </tr>
         </tfoot>
@@ -1407,6 +1405,7 @@
     new DataTable('#FieldTable');
     new DataTable('#CropTable');
     new DataTable('#MonitoringLogTable');
+    new DataTable('#UserTable');
 </script>
 <script src="../assets/js/nav/SPARouterDashboard.js"></script>
 <script src="../assets/js/nav/sidebar.js"></script>
@@ -1415,5 +1414,6 @@
         window.location.href = "../index.html";
     });
 </script>
+<script src="../assets/js/controller/UserController.js"></script>
 </body>
 </html>
