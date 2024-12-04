@@ -22,7 +22,7 @@ $(document).ready(function () {
             equipmentName: equipmentName,
             equipmentType: equipmentType,
             equipmentStatus: equipmentStatus,
-            equipmentStaffId: equipmentStaffId,
+            staffId: equipmentStaffId,
         };
 
         $.ajax({
@@ -81,7 +81,7 @@ $(document).ready(function () {
             equipmentName: equipmentName,
             equipmentType: equipmentType,
             equipmentStatus: equipmentStatus,
-            equipmentStaffId: equipmentStaffId,
+            staffId: equipmentStaffId,
         };
 
         $.ajax({
@@ -183,7 +183,7 @@ $(document).ready(function () {
                             <td>${equipment.equipmentName}</td>
                             <td>${equipment.equipmentType}</td>
                             <td>${equipment.equipmentStatus}</td>
-                            <td>${equipment.equipmentStaffId}</td>
+                            <td>${equipment.staffId}</td>
                         </tr>
                     `);
                 });
@@ -198,6 +198,26 @@ $(document).ready(function () {
             },
         });
     }
+
+    $('#EquipmentTable tbody').on('click', 'tr', function() {
+        if($(this).hasClass('selected')) {
+            $(this).removeClass('selected');
+            clearFields();
+        } else {
+            $('#EquipmentTable tbody tr').removeClass('selected');
+            $(this).addClass('selected');
+
+            var data = $(this).children("td").map(function() {
+                return $(this).text();
+            }).get();
+
+            $("#equipmentIdField").val(data[0]);
+            $("#equipmentNameField").val(data[1]);
+            $("#equipmentTypeSelect").val(data[2]);
+            $("#equipmentStatusSelect").val(data[3]);
+            $("#equipmentStaffIdField").val(data[4]);
+        }
+    });
 
     // Clear the form fields
     $("#clearEquipmentBtn").on("click", function () {
