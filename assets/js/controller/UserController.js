@@ -7,7 +7,11 @@ $(document).ready(function () {
 
         // Validate input fields
         if (!email || !password || role === "Choose Role") {
-            alert("Please fill out all fields correctly.");
+            Swal.fire({
+                icon: "warning",
+                title: "Incomplete Form",
+                text: "Please fill out all fields correctly.",
+            });
             return;
         }
 
@@ -28,13 +32,21 @@ $(document).ready(function () {
                 Authorization: `Bearer ${localStorage.getItem("jwtToken")}`,
             },
             success: function () {
-                alert("User updated successfully!");
+                Swal.fire({
+                    icon: "success",
+                    title: "User Updated",
+                    text: "User updated successfully!",
+                });
                 // Fetch updated users and populate the table
                 getAllUsers();
             },
             error: function (xhr, status, error) {
                 console.error("Error updating user:", error);
-                alert("Failed to update user. Please try again.");
+                Swal.fire({
+                    icon: "error",
+                    title: "Update Failed",
+                    text: "Failed to update user. Please try again.",
+                });
             },
         });
     });
@@ -64,7 +76,11 @@ $(document).ready(function () {
             },
             error: function (xhr, status, error) {
                 console.error("Error fetching users:", error);
-                alert("Failed to fetch users. Please try again.");
+                Swal.fire({
+                    icon: "error",
+                    title: "Fetch Failed",
+                    text: "Failed to fetch users. Please try again.",
+                });
             },
         });
     }
