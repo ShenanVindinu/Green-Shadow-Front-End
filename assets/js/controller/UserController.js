@@ -42,11 +42,20 @@ $(document).ready(function () {
             },
             error: function (xhr, status, error) {
                 console.error("Error updating user:", error);
-                Swal.fire({
-                    icon: "error",
-                    title: "Update Failed",
-                    text: "Failed to update user. Please try again.",
-                });
+
+                if (xhr.status === 403) {
+                    Swal.fire({
+                        icon: "error",
+                        title: "Access Denied",
+                        text: "You don't have access to update this user.",
+                    });
+                } else {
+                    Swal.fire({
+                        icon: "error",
+                        title: "Update Failed",
+                        text: "Failed to update user. Please try again.",
+                    });
+                }
             },
         });
     });
