@@ -221,6 +221,27 @@ $(document).ready(function () {
         });
     }
 
+    $('#vehicleTable tbody').on('click', 'tr', function() {
+        if($(this).hasClass('selected')) {
+            $(this).removeClass('selected');
+            clearFields();
+        } else {
+            $('#vehicleTable tbody tr').removeClass('selected');
+            $(this).addClass('selected');
+
+            var data = $(this).children("td").map(function() {
+                return $(this).text();
+            }).get();
+
+            $("#vehicleIdField").val(data[0]);
+            $("#licensePlateNumberField").val(data[1]);
+            $("#vehicleCategoryField").val(data[2]);
+            $("#fuelTypeField").val(data[3]);
+            $("#vehicleStatusSelect").val(data[4]);
+            $("#remarksField").val(data[5]);
+        }
+    });
+
     // Call the function to populate the table on page load
     getAllVehicles();
 
