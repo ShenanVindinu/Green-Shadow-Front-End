@@ -196,7 +196,7 @@ $(document).ready(function () {
                             <td>${vehicle.licensePlateNumber}</td>
                             <td>${vehicle.vehicleCategory}</td>
                             <td>${vehicle.fuelType}</td>
-                            <td>${vehicle.vehicleStatus}</td>
+                            <td>${vehicle.status}</td>
                             <td>${vehicle.remarks}</td>
                         </tr>
                     `;
