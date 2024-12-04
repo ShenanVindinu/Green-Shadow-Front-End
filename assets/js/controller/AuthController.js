@@ -7,7 +7,11 @@ $(document).ready(function () {
 
 
         if (!email || !password) {
-            alert("Please enter both email and password.");
+            Swal.fire({
+                icon: "warning",
+                title: "Missing Information",
+                text: "Please enter both email and password.",
+            });
             return;
         }
 
@@ -28,12 +32,21 @@ $(document).ready(function () {
 
                     window.location.href = "pages/dashboard.html";
                 } else {
-                    alert("Login failed. No token received.");
+                    Swal.fire({
+                        icon: "error",
+                        title: "Login Failed",
+                        text: "Please try again.",
+                    });
+
                 }
             },
             error: function (xhr, status, error) {
                 console.error("Error during login:", error);
-                alert("Login failed. Please check your credentials and try again.");
+                Swal.fire({
+                    icon: "error",
+                    title: "Login Failed",
+                    text: "Please check your credentials and try again.",
+                });
             },
         });
     });
@@ -56,7 +69,11 @@ $(document).ready(function () {
 
 
         if (!email || !password) {
-            alert("Please enter both email and password.");
+            Swal.fire({
+                icon: "warning",
+                title: "Missing Information",
+                text: "Please enter both email and password.",
+            });
             return;
         }
 
@@ -78,12 +95,19 @@ $(document).ready(function () {
 
                     window.location.href = "pages/dashboard.html";
                 } else {
-                    alert("Signup successful, but no token received.");
+                    Swal.fire({
+                        icon: "warning",
+                        title: "Signup Successful",
+                        text: "Signup was successful, but no token was received.",
+                    });
                 }
             },
-            error: function (xhr, status, error) {
-
-                alert("Signup failed. Please check your input and try again.");
+            error: function () {
+                Swal.fire({
+                    icon: "error",
+                    title: "Signup Failed",
+                    text: "Please check your input and try again.",
+                });
             },
         });
     });
