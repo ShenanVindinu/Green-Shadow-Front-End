@@ -94,6 +94,23 @@ $(document).ready(function () {
         });
     }
 
+    $('#UserTable tbody').on('click', 'tr', function() {
+        if ($(this).hasClass('selected')) {
+            $(this).removeClass('selected');
+            clearFields();
+        } else {
+            $('#UserTable tbody tr').removeClass('selected');
+            $(this).addClass('selected');
+
+            var data = $(this).children("td").map(function() {
+                return $(this).text();
+            }).get();
+
+            $("#UserEmailField2").val(data[0]);
+            $("#UserRoleSelect").val(data[1]);
+        }
+    });
+
     // Initial load of users into the table
     getAllUsers();
 });
