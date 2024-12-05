@@ -176,19 +176,20 @@ $(document).ready(function () {
                 Authorization: `Bearer ${localStorage.getItem("jwtToken")}`,
             },
             success: function (logs) {
-                const logsTableBody = $("#MonitoringLogTable tbody");
-                logsTableBody.empty();
-                logs.forEach(function (log) {
-                    logsTableBody.append(`
-                        <tr>
-                            <td>${log.logId}</td>
-                            <td>${log.logDate}</td>
-                            <td>${log.logDetails}</td>
-                            <td>${log.field || 'N/A'}</td>
-                            <td>${log.staff || 'N/A'}</td>
-                        </tr>
-                    `);
-                });
+                const table = $('#MonitoringLogTable').DataTable(); // Get DataTable instance
+                table.clear(); // Clear existing rows
+
+                // Map logs data to an array format
+                const logRows = logs.map(log => [
+                    log.logId,
+                    log.logDate,
+                    log.logDetails,
+                    log.field || 'N/A',
+                    log.staff || 'N/A'
+                ]);
+
+                // Add rows and redraw the table
+                table.rows.add(logRows).draw();
             },
             error: function () {
                 Swal.fire({
@@ -199,6 +200,7 @@ $(document).ready(function () {
             }
         });
     }
+
 
     // Select log from the table
     $('#MonitoringLogTable tbody').on('click', 'tr', function () {
