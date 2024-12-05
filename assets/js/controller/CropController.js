@@ -191,21 +191,20 @@ $(document).ready(function () {
                 Authorization: `Bearer ${localStorage.getItem("jwtToken")}`,
             },
             success: function (crops) {
-                let cropTableRows = '';
-                crops.forEach(crop => {
-                    cropTableRows += `
-                    <tr>
-                        <td>${crop.cropId}</td>
-                        <td>${crop.cropCommonName}</td>
-                        <td>${crop.cropScientificName}</td>
-                        <td>${crop.category}</td>
-                        <td><img src="data:image/jpeg;base64,${crop.cropImage}" alt="${crop.cropCommonName}" width="50" height="50"></td>
-                        <td>${crop.cropSeason}</td>
-                        <td>${crop.fieldId}</td>
-                    </tr>`;
-                });
+                const table = $('#CropTable').DataTable();
+                table.clear();
 
-                $("#CropTable tbody").html(cropTableRows);
+                const cropTableRows = crops.map(crop => [
+                    crop.cropId,
+                    crop.cropCommonName,
+                    crop.cropScientificName,
+                    crop.category,
+                    `<img src="data:image/jpeg;base64,${crop.cropImage}" alt="${crop.cropCommonName}" width="50" height="50">`,
+                    crop.cropSeason,
+                    crop.fieldId
+                ]);
+
+                table.rows.add(cropTableRows).draw();
             },
             error: function () {
                 Swal.fire({
