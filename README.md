@@ -50,8 +50,8 @@ greenShadow/
 ├── index.html         # Main entry point (Login page)  
 ├── pages/  
 │   └── dashboard.html # Dashboard for CRUD operations  
-├── README.md          # Project documentation  
-└── package.json       # If using npm for dependencies (optional)  
+├── README.md          # Project documentation
+  
 ```  
 
 ## Contributing  
