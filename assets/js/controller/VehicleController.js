@@ -175,7 +175,7 @@ $(document).ready(function () {
         $("#vehicleIdField").val("");
     });
 
-    // Function to get all vehicles and populate the table
+
     function getAllVehicles() {
         $.ajax({
             url: "http://localhost:5050/greenShadow/api/v1/vehicle",
@@ -184,24 +184,21 @@ $(document).ready(function () {
                 Authorization: `Bearer ${localStorage.getItem("jwtToken")}`,
             },
             success: function (response) {
-                const table = $('#UserTable').DataTable();
+                const table = $('#vehicleTable').DataTable();
                 table.clear();
 
-                const vehicles = response;
-                let tableContent = "";
-                vehicles.forEach(function (vehicle) {
-                    tableContent += `
-                        <tr>
-                            <td>${vehicle.vehicleId}</td>
-                            <td>${vehicle.licensePlateNumber}</td>
-                            <td>${vehicle.vehicleCategory}</td>
-                            <td>${vehicle.fuelType}</td>
-                            <td>${vehicle.status}</td>
-                            <td>${vehicle.remarks}</td>
-                        </tr>
-                    `;
-                });
-                $("#vehicleTable tbody").html(tableContent);
+
+                const vehicleRows = response.map(vehicle => [
+                    vehicle.vehicleId,
+                    vehicle.licensePlateNumber,
+                    vehicle.vehicleCategory,
+                    vehicle.fuelType,
+                    vehicle.status,
+                    vehicle.remarks
+                ]);
+
+
+                table.rows.add(vehicleRows).draw();
             },
             error: function (xhr, status, error) {
                 if (xhr.status === 403) {
@@ -220,6 +217,7 @@ $(document).ready(function () {
             }
         });
     }
+
 
     $('#vehicleTable tbody').on('click', 'tr', function() {
         if($(this).hasClass('selected')) {
@@ -242,7 +240,7 @@ $(document).ready(function () {
         }
     });
 
-    // Call the function to populate the table on page load
+
     getAllVehicles();
 
 });
