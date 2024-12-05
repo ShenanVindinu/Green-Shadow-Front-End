@@ -165,7 +165,7 @@ $(document).ready(function () {
         });
     });
 
-    // Fetch all equipment
+
     function getAllEquipment() {
         $.ajax({
             url: "http://localhost:5050/greenShadow/api/v1/equipment",
@@ -174,19 +174,20 @@ $(document).ready(function () {
                 Authorization: `Bearer ${localStorage.getItem("jwtToken")}`,
             },
             success: function (data) {
-                const tableBody = $("#EquipmentTable tbody");
-                tableBody.empty();
-                data.forEach(function (equipment) {
-                    tableBody.append(`
-                        <tr>
-                            <td>${equipment.equipmentId}</td>
-                            <td>${equipment.equipmentName}</td>
-                            <td>${equipment.equipmentType}</td>
-                            <td>${equipment.equipmentStatus}</td>
-                            <td>${equipment.staffId}</td>
-                        </tr>
-                    `);
-                });
+                const table = $('#EquipmentTable').DataTable(); // Initialize or get DataTable instance
+                table.clear(); // Clear existing rows
+
+                // Map data to an array format
+                const equipmentRows = data.map(equipment => [
+                    equipment.equipmentId,
+                    equipment.equipmentName,
+                    equipment.equipmentType,
+                    equipment.equipmentStatus,
+                    equipment.staffId,
+                ]);
+
+                // Add rows and redraw the table
+                table.rows.add(equipmentRows).draw();
             },
             error: function (xhr, status, error) {
                 console.error("Error fetching equipment:", error);
@@ -198,6 +199,7 @@ $(document).ready(function () {
             },
         });
     }
+
 
     $('#EquipmentTable tbody').on('click', 'tr', function() {
         if($(this).hasClass('selected')) {
