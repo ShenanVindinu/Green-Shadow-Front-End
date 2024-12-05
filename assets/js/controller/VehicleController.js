@@ -22,7 +22,7 @@ $(document).ready(function () {
             licensePlateNumber: licensePlateNumber,
             vehicleCategory: vehicleCategory,
             fuelType: fuelType,
-            status: vehicleStatus,
+            vehicleStatus: vehicleStatus,
             remarks: remarks,
         };
 
@@ -193,7 +193,7 @@ $(document).ready(function () {
                     vehicle.licensePlateNumber,
                     vehicle.vehicleCategory,
                     vehicle.fuelType,
-                    vehicle.status,
+                    vehicle.vehicleStatus,
                     vehicle.remarks
                 ]);
 
