@@ -1,14 +1,12 @@
-$("#dashboardSection").css({display: 'block'});
 $("#staffSection").css({display: 'none'});
 $("#vehicleSection").css({display: 'none'});
 $("#equipmentSection").css({display: 'none'});
 $("#FieldSection").css({display: 'none'});
 $("#cropSection").css({display: 'none'});
 $("#monitoringLogSection").css({display: 'none'});
-$("#userSection").css({display: 'none'});
+$("#userSection").css({display: 'block'});
 
 $("#staffBtn").eq(0).on('click', () => {
-    $("#dashboardSection").css({display: 'none'});
     $("#vehicleSection").css({display: 'none'});
     $("#equipmentSection").css({display: 'none'});
     $("#FieldSection").css({display: 'none'});
@@ -18,20 +16,8 @@ $("#staffBtn").eq(0).on('click', () => {
     $("#staffSection").css({display: 'block'});
 });
 
-$("#dashboardBtn").eq(0).on('click', () => {
-    $("#staffSection").css({display: 'none'});
-    $("#vehicleSection").css({display: 'none'});
-    $("#equipmentSection").css({display: 'none'});
-    $("#FieldSection").css({display: 'none'});
-    $("#cropSection").css({display: 'none'});
-    $("#monitoringLogSection").css({display: 'none'});
-    $("#userSection").css({display: 'none'});
-    $("#dashboardSection").css({display: 'block'});
-});
-
 $("#vehicleBtn").eq(0).on('click', () => {
     $("#staffSection").css({display: 'none'});
-    $("#dashboardSection").css({display: 'none'});
     $("#equipmentSection").css({display: 'none'});
     $("#FieldSection").css({display: 'none'});
     $("#cropSection").css({display: 'none'});
@@ -42,7 +28,6 @@ $("#vehicleBtn").eq(0).on('click', () => {
 
 $("#equipmentBtn").eq(0).on('click', () => {
     $("#staffSection").css({display: 'none'});
-    $("#dashboardSection").css({display: 'none'});
     $("#vehicleSection").css({display: 'none'});
     $("#FieldSection").css({display: 'none'});
     $("#cropSection").css({display: 'none'});
@@ -53,7 +38,6 @@ $("#equipmentBtn").eq(0).on('click', () => {
 
 $("#fieldBtn").eq(0).on('click', () => {
     $("#staffSection").css({display: 'none'});
-    $("#dashboardSection").css({display: 'none'});
     $("#vehicleSection").css({display: 'none'});
     $("#equipmentSection").css({display: 'none'});
     $("#cropSection").css({display: 'none'});
@@ -64,7 +48,6 @@ $("#fieldBtn").eq(0).on('click', () => {
 
 $("#cropBtn").eq(0).on('click', () => {
     $("#staffSection").css({display: 'none'});
-    $("#dashboardSection").css({display: 'none'});
     $("#vehicleSection").css({display: 'none'});
     $("#equipmentSection").css({display: 'none'});
     $("#FieldSection").css({display: 'none'});
@@ -75,7 +58,6 @@ $("#cropBtn").eq(0).on('click', () => {
 
 $("#monitoringLogBtn").eq(0).on('click', () => {
     $("#staffSection").css({display: 'none'});
-    $("#dashboardSection").css({display: 'none'});
     $("#vehicleSection").css({display: 'none'});
     $("#equipmentSection").css({display: 'none'});
     $("#FieldSection").css({display: 'none'});
@@ -86,13 +68,16 @@ $("#monitoringLogBtn").eq(0).on('click', () => {
 
 $("#UserBtn").eq(0).on('click', () => {
     $("#staffSection").css({display: 'none'});
-    $("#dashboardSection").css({display: 'none'});
     $("#vehicleSection").css({display: 'none'});
     $("#equipmentSection").css({display: 'none'});
     $("#FieldSection").css({display: 'none'});
     $("#cropSection").css({display: 'none'});
     $("#monitoringLogSection").css({display: 'none'});
     $("#userSection").css({display: 'block'});
+});
+
+$("#signOutBtn").on('click', () => {
+    window.location.href = "../index.html";
 });
 
 
