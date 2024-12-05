@@ -203,21 +203,22 @@ $(document).ready(function () {
                 Authorization: `Bearer ${localStorage.getItem("jwtToken")}`,
             },
             success: function (data) {
-                const tableBody = $("#staffTable tbody");
-                tableBody.empty();
-                data.forEach(function (staff) {
-                    tableBody.append(`
-                        <tr>
-                            <td>${staff.staffId}</td>
-                            <td>${staff.firstName} ${staff.lastName}</td>
-                            <td>${staff.gender}</td>
-                            <td>${staff.designation}</td>
-                            <td>${staff.role}</td>
-                            <td>${staff.joinedDate}</td>
-                            <td>${staff.vehicle || "N/A"}</td>
-                        </tr>
-                    `);
-                });
+                const table = $('#staffTable').DataTable(); // Get DataTable instance
+                table.clear(); // Clear existing rows
+
+                // Map data to an array format
+                const staffRows = data.map(staff => [
+                    staff.staffId,
+                    `${staff.firstName} ${staff.lastName}`,
+                    staff.gender,
+                    staff.designation,
+                    staff.role,
+                    staff.joinedDate,
+                    staff.vehicle || "N/A"
+                ]);
+
+                // Add rows and redraw the table
+                table.rows.add(staffRows).draw();
             },
             error: function (xhr, status, error) {
                 console.error("Error fetching staff members:", error);
@@ -229,6 +230,7 @@ $(document).ready(function () {
             },
         });
     }
+
 
     // Select staff member from the table
     $('#staffTable tbody').on('click', 'tr', function() {
